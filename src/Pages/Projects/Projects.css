@@ -1,0 +1,22 @@
+/* src/pages/Projects/Projects.css */
+
+.projects-page {
+    color: var(--color-primary-text); 
+    padding: 0 0 20px 0;
+}
+
+.projects-page h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.projects-page p {
+    color: var(--color-secondary-text); 
+}
+
+
+.project-list {
+    margin-top: 30px;
+    
+}
+

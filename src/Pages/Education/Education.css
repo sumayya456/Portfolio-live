@@ -1,0 +1,59 @@
+/* src/pages/Education/Education.css*/
+
+.timeline {
+    position: relative;
+    max-width: 600px; 
+    margin: 0 auto;
+    padding: 0 10px;
+    margin-bottom: 40px; 
+}
+
+/* Vertical dividing line*/
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #333; 
+    top: 0;
+    bottom: 0;
+    left: 31px; 
+    margin-left: 0;
+    z-index: 1;
+}
+
+.timeline-item {
+    margin-bottom: 30px; 
+    padding: 10px 10px 10px 60px; 
+    position: relative;
+    width: 100%;
+    z-index: 2; 
+    left: 0;
+}
+
+
+.timeline-year-circle {
+    position: absolute;
+    
+    left: -60px; 
+    
+   
+    top: 20px; 
+    
+    width: 60px;
+    height: 30px;
+    
+    
+    background-color: transparent; 
+    
+    border-radius: 0; 
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+    /* Style for the year text */
+    color: #fff; 
+    font-weight: 400; 
+    font-size: 1rem;
+}
+

@@ -1,0 +1,179 @@
+/* src/pages/Skills/Skills.css*/
+
+.skills-container {
+    padding: 0 40px 60px 40px; 
+    color: #fff;
+    width: 100%;
+}
+
+.skills-header {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 2rem; 
+    text-align: center;
+    color: #fff;
+}
+
+.skills-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto 3rem auto; 
+}
+
+.metric-card {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border-bottom: 4px solid #9333ea; 
+}
+
+.metric-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #9333ea;
+    margin: 0 0 5px 0;
+}
+
+.metric-label {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin: 0;
+}
+
+
+/* --- NEW SECTION: 2. Tech Stack Badges --- */
+
+
+.skills-tech-stack {
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    padding: 20px 30px;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+}
+
+.tech-stack-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tech-stack-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-badge {
+    background-color: #2b2b2b;
+    color: #9333ea;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid #9333ea;
+}
+
+
+
+
+.timeline-section-title {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 600px; 
+    margin: 0 auto;
+    padding: 0 10px;
+    margin-bottom: 40px; 
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #333; 
+    top: 0;
+    bottom: 0;
+    left: 31px; 
+    margin-left: 0;
+    z-index: 1;
+}
+
+.timeline-item {
+    margin-bottom: 30px; 
+    padding: 10px 10px 10px 60px;
+    position: relative;
+    width: 100%;
+    z-index: 2; 
+    left: 0;
+}
+
+
+.timeline-content {
+    background-color: #1e1e1e;
+    padding: 20px 30px;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    border-left: 3px solid #9333ea; 
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.timeline-year-range {
+    display: block;
+    font-size: 0.8rem;
+    color: #9333ea;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.details {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+
+.timeline-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #9333ea; 
+    position: absolute;
+    top: 25px;
+    border-radius: 50%;
+    z-index: 3; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.2rem;
+    left: 15px; 
+}
+
+
+.timeline-item .timeline-content::after {
+    content: none;
+}

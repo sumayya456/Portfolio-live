@@ -1,0 +1,73 @@
+/* src/components/ui/CardBox/CardBox.css */
+
+.card-box {
+    /* Appearance */
+    background-color: var(--color-card-bg); 
+    padding: 30px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border: none; 
+    
+    /* Layout */
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; 
+    color: var(--color-primary-text);
+}
+
+.card-category {
+    color: var(--color-secondary-text); 
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.card-content {
+    flex-grow: 1;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.card-content p {
+    margin: 0;
+    color: var(--color-secondary-text); 
+}
+
+.huge-number {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--color-accent); 
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.years-text {
+    font-size: 1.5rem;
+    color: var(--color-primary-text);
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.small-detail {
+    font-size: 0.9rem;
+    color: var(--color-secondary-text);
+}
+
+.view-link {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+.view-link:hover {
+    color: white;
+}
