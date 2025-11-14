@@ -1,72 +1,88 @@
 // src/App.tsx
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// 1. IMPORT ALL COMPONENTS
+// Sidebar
+import Sidebar from "./components/layouts/Sidebar/Sidebar";
 
+// ⭐ NEW: analytics listener
+import AnalyticsListener from "./AnalyticsListener";
 
-import Sidebar from './components/layouts/Sidebar/Sidebar'; 
+// Sidebar Pages
+import Home from "./Pages/Home/Home";
+import Education from "./Pages/Education/Education";
+import Skills from "./Pages/Skills/Skills";
+import Contact from "./Pages/Contact/Contact";
+import Gallery from "./Pages/Gallery/Gallery";
 
-import Home from './Pages/Home/Home';                      
-import Education from './Pages/Education/Education';        
-import Skills from './Pages/Skills/Skills';                
-import Contact from './Pages/Contact/Contact';              
-import Projects from './Pages/Projects/Projects';          
-import Gallery from './Pages/Gallery/Gallery';              
+// Home Card Pages
+import Blogs from "./Pages/Blogs/Blogs";
+import Certifications from "./Pages/Certifications/Certifications";
+import Experience from "./Pages/Experience/Experience";
+import Testimonies from "./Pages/Testimonies/Testimonies";
+import Volunteer from "./Pages/Volunteer/Volunteer";
+import FeaturedProjects from "./Pages/Featured Projects/Featured Projects";
+import ResearchPublications from "./Pages/Research-Publications/Research-Publications";
 
-
-
-const Blogs = () => <div style={{padding: '40px', color: 'white'}}><h2>Blog Posts (Coming Soon)</h2></div>;
-const Testimonials = () => <div style={{padding: '40px', color: 'white'}}><h2>Testimonials & Reviews (Coming Soon)</h2></div>;
-const Research = () => <div style={{padding: '40px', color: 'white'}}><h2>Research/Publications (Coming Soon)</h2></div>;
-
+import "./App.css";
 
 const App: React.FC = () => {
+  const [theme, setTheme] = useState<"dark" | "light">(() => {
+    const saved = localStorage.getItem("theme");
+    return saved === "light" ? "light" : "dark";
+  });
+
+  useEffect(() => {
+    document.body.dataset.theme = theme;
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+  };
+
   return (
     <Router>
-      <div 
-        style={{
-          display: 'flex',
-          height: '100vh',        
-          width: '100vw',
-          overflow: 'hidden',     
-          backgroundColor: '#121212', 
-        }}
-      >
+      <div className="app-root">
+        {/* Sidebar */}
         <Sidebar />
-        
-        {/* Main Content Wrapper - Scrollable Area */}
-        <div 
-          style={{
-            flexGrow: 1,
-            padding: '40px', 
-            overflowY: 'auto', 
-            display: 'flex',
-            flexDirection: 'column', 
-            height: '100%',
-          }}
-        >
-          <Routes>
-            {/* Primary Sidebar Routes */}
-            <Route path="/" element={<Home />} />
-            <Route path="/education" element={<Education />} /> 
-            <Route path="/skills" element={<Skills />} />
-            
-            {/* Sidebar Link: Gallery (Photo/Video) */}
-            <Route path="/gallery" element={<Gallery />} /> 
-            
-            <Route path="/contact" element={<Contact />} />
-            
-            {/* Home Card Link: Projects (Technical Cards) */}
-            <Route path="/projects" element={<Projects />} /> 
-            
-            {/* Other Home Card Routes */}
-            <Route path="/blogs" element={<Blogs />} /> 
-            <Route path="/testimonials" element={<Testimonials />} /> 
-            <Route path="/research" element={<Research />} /> 
 
-            {}
-            <Route path="*" element={<Home />} /> 
+        {/* ⭐ Analytics listener – inside Router, outside Routes */}
+        <AnalyticsListener />
+
+        {/* Top-right controls */}
+        <div className="top-right-controls">
+          <a
+            href={`${import.meta.env.BASE_URL}shaik%20Sumayya%20resume.pdf`}
+            download
+            className="cv-button"
+          >
+            Download CV
+          </a>
+
+          <button className="theme-toggle" onClick={toggleTheme}>
+            {theme === "dark" ? "☀️ Light" : "🌙 Dark"}
+          </button>
+        </div>
+
+        {/* Main content */}
+        <div className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/education" element={<Education />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/contact" element={<Contact />} />
+
+            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/certifications" element={<Certifications />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/testimonies" element={<Testimonies />} />
+            <Route path="/volunteer" element={<Volunteer />} />
+            <Route path="/projects" element={<FeaturedProjects />} />
+            <Route path="/research" element={<ResearchPublications />} />
+
+            <Route path="*" element={<Home />} />
           </Routes>
         </div>
       </div>

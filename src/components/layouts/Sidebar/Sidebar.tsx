@@ -41,7 +41,11 @@ const Sidebar: React.FC = () => {
   return (
     <div className="sidebar-container">
       <div className="profile-section">
-        <div className="profile-initials">SS</div>
+        <img
+        src={`${import.meta.env.BASE_URL}Profile-photo.jpeg`}
+        className="profile-photo"
+        />
+        
         <p className="profile-name">Shaik Sumayya</p>
         <p className="profile-title">QA Engineer</p>
       </div>

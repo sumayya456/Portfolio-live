@@ -16,7 +16,42 @@
     padding: 0 20px 40px;
 }
 
-.profile-initials {
+.profile-photo {
+  width: 80px;          /* ✅ smaller, balanced size */
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2.5px solid #9333ea; /* purple accent */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  margin: 0 auto 10px;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(147, 51, 234, 0.5);
+}
+
+.profile-name {
+  font-weight: 600;
+  color: var(--color-primary-text);
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.profile-title {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+
+
+
+
+/*.profile-initials {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -28,7 +63,7 @@
     font-size: 1.5rem;
     font-weight: 600;
     margin: 0 auto 10px;
-}
+} */
 
 /* Navigation Links */
 .nav-links {

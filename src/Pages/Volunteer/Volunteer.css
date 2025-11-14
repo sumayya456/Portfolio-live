@@ -1,0 +1,79 @@
+.volunteer-container {
+  padding: 40px;
+  color: #fff;
+}
+
+.volunteer-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.volunteer-subtitle {
+  color: #aaa;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+/* Grid layout */
+.volunteer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Volunteer cards */
+.volunteer-card {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.volunteer-card:hover {
+  border-color: #9333ea;
+  box-shadow: 0 0 20px rgba(147, 51, 234, 0.5);
+  transform: translateY(-4px);
+}
+
+.volunteer-card h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #c084fc;
+  margin-bottom: 8px;
+}
+
+.volunteer-org {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 4px;
+}
+
+.volunteer-duration {
+  color: #aaa;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.volunteer-desc {
+  color: #ddd;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.volunteer-link {
+  display: inline-block;
+  color: #9333ea;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.volunteer-link:hover {
+  color: #a855f7;
+  text-decoration: underline;
+}

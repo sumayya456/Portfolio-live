@@ -1,0 +1,92 @@
+.testimonies-container {
+  padding: 40px;
+  color: #fff;
+}
+
+.testimonies-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.testimonies-subtitle {
+  color: #aaa;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+/* Grid layout */
+.testimonies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Testimony cards */
+.testimony-card {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 25px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.testimony-card:hover {
+  border-color: #9333ea;
+  box-shadow: 0 0 20px rgba(147, 51, 234, 0.5);
+  transform: translateY(-4px);
+}
+
+/* Profile Image */
+.testimony-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 2px solid #9333ea;
+}
+
+/* Fallback initials */
+.testimony-initials {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #9333ea;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.testimony-message {
+  color: #ddd;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.testimony-author h3 {
+  color: #c084fc;
+  font-size: 1.05rem;
+  margin: 5px 0;
+}
+
+.testimony-author p {
+  color: #aaa;
+  font-size: 0.85rem;
+}
+
+.testimony-author span {
+  color: #9333ea;
+  font-weight: 500;
+}
