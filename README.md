@@ -94,7 +94,7 @@ The portfolio consists of multiple sections (Home, About, Projects, Blog, Certif
 
 Actual structure used in this project:
 
-                  # Project root (folder name may differ)
+                 
 ├── public/
 │   └── assets/
 │       ├── certifications/
